@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node src/scripts/seed.ts"
   },
   "keywords": [],
   "author": "",
