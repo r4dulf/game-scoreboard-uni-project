@@ -1,0 +1,54 @@
+# Privacy Policy
+
+_Last updated: May 31, 2025_
+
+This Privacy Policy explains how your personal information is collected, used, and protected in the Game Scoreboard application.
+
+## 1. Information We Collect
+
+- **Username**: Required for account registration.
+- **Password**: Encrypted and stored securely.
+- **Scores**: Game-related performance data.
+
+We do not collect any personally identifiable information beyond what is necessary to operate the application.
+
+## 2. Use of Information
+
+We use the collected information solely to:
+
+- Authenticate users
+- Track and update player scores
+- Display leaderboard rankings
+
+## 3. Cookies
+
+We use cookies to:
+
+- Manage session-based authentication (JWT in storage)
+- Display cookie consent banner (required by GDPR)
+
+You may control cookies through your browser settings.
+
+## 4. Data Security
+
+All user data is stored securely in a local SQLite database. Passwords are hashed using industry-standard methods.
+
+## 5. Data Retention
+
+Data is retained only for as long as necessary to provide the functionality of the app.
+
+## 6. User Rights
+
+Under the GDPR, you have the right to:
+
+- Access your data
+- Request deletion or correction
+- Withdraw consent at any time
+
+## 7. Contact
+
+If you have any questions about this policy, contact:
+
+**Bohdan Stetsiuk**  
+Group: ІПЗ-22-2
+Email: ipz222_sbyu@student.ztu.edu.ua
