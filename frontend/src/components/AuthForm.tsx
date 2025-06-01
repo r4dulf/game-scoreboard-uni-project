@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { login, register } from "../api";
+import { useCookieConsent } from "../context/CookieContext/useCookieContext";
 
 interface Props {
   onAuth: () => void;
@@ -10,6 +11,16 @@ const AuthForm = ({ onAuth }: Props) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const { consent } = useCookieConsent();
+
+  if (!consent) {
+    return (
+      <div>
+        <h2>Please accept cookies to register or log in</h2>
+      </div>
+    );
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

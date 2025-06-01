@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { logout } from "./api";
 import AuthForm from "./components/AuthForm";
 import PlayerList from "./components/PlayerList";
-import CookieConsent from "react-cookie-consent";
+import CookiePopup from "./components/CookiePopup";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -24,23 +24,14 @@ const App = () => {
       {isAuthenticated ? (
         <>
           <button onClick={handleLogout}>Log out</button>
+
           <PlayerList />
         </>
       ) : (
         <AuthForm onAuth={() => setIsAuthenticated(true)} />
       )}
 
-      <CookieConsent
-        location="bottom"
-        buttonText="Accept"
-        style={{ background: "#2B373B" }}
-        buttonStyle={{ color: "#fff", background: "#007bff", fontSize: "13px" }}
-      >
-        This site uses cookies to enhance the user experience and for security.{" "}
-        <a href="/privacy" style={{ color: "#00ffff" }}>
-          Learn more
-        </a>
-      </CookieConsent>
+      <CookiePopup />
     </div>
   );
 };
