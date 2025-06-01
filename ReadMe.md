@@ -17,11 +17,11 @@ This is a full-stack educational project built for university coursework. It fea
 
 ```bash
 cd backend
-cp .env.example .env        # Copy example environment file
-npm install                 # Install dependencies
-npx prisma migrate dev --name init   # Initialize and migrate the database
-npm run seed                # Seed the database with initial players
-npm run dev                 # Start the backend server
+cp .env.example .env                  # Copy example environment file
+npm install                           # Install dependencies
+npx prisma migrate dev --name init    # Initialize and migrate the database
+npm run seed                          # Seed the database with initial players
+npm run dev                           # Start the backend server
 ```
 
 #### Backend Scripts
