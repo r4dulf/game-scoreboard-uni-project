@@ -3,6 +3,7 @@ import { logout } from "./api";
 import PlayerList from "./components/PlayerList";
 import CookiePopup from "./components/CookiePopup";
 import AuthForm from "./components/AuthForm";
+import { Button } from "./components/Button";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,9 +24,11 @@ const App = () => {
 
       {isAuthenticated ? (
         <>
-          <button onClick={handleLogout}>Log out</button>
-
           <PlayerList />
+
+          <Button onClick={handleLogout} variant="danger">
+            Log out
+          </Button>
         </>
       ) : (
         <AuthForm onAuth={() => setIsAuthenticated(true)} />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPlayers, updateScore } from "../api";
 import { jwtDecode } from "jwt-decode";
+import { Button } from "./Button";
 
 interface Player {
   id: number;
@@ -62,15 +63,16 @@ const PlayerList = () => {
             <td>
               {player.id === userId ? (
                 <>
-                  <button onClick={() => handleScoreChange(player.id, +1)}>
+                  <Button onClick={() => handleScoreChange(player.id, +1)}>
                     +1
-                  </button>
-                  <button onClick={() => handleScoreChange(player.id, -1)}>
+                  </Button>
+
+                  <Button onClick={() => handleScoreChange(player.id, -1)}>
                     -1
-                  </button>
+                  </Button>
                 </>
               ) : (
-                <span style={{ color: "#888" }}>—</span>
+                "--"
               )}
             </td>
           </tr>
