@@ -37,9 +37,9 @@ npm run dev                           # Start the backend server
 
 ```bash
 cd frontend
-cp ../frontend.env.example .env  # Copy frontend env variables
-npm install                      # Install dependencies
-npm run dev                      # Start frontend dev server (Vite)
+cp ../frontend.env.example .env       # Copy frontend env variables
+npm install                           # Install dependencies
+npm run dev                           # Start frontend dev server (Vite)
 ```
 
 #### Frontend Scripts
