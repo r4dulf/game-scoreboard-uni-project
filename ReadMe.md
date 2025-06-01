@@ -37,8 +37,9 @@ npm run dev                 # Start the backend server
 
 ```bash
 cd frontend
-npm install                 # Install dependencies
-npm run dev                 # Start frontend dev server (Vite)
+cp ../frontend.env.example .env  # Copy frontend env variables
+npm install                      # Install dependencies
+npm run dev                      # Start frontend dev server (Vite)
 ```
 
 #### Frontend Scripts
@@ -70,12 +71,22 @@ Once backend is running:
 
 ## 🔐 Environment Variables
 
-Copy `.env.example` into `.env` in `backend/`:
+### Backend
+
+File: [`backend/.env.example`](./backend/.env.example)
 
 ```env
 DATABASE_URL="file:./dev.db"
 JWT_SECRET="your-secret"
 PORT=3000
+```
+
+### Frontend
+
+File: [`frontend/.env`](./frontend/.env) ← from [`frontend.env.example`](./frontend.env.example)
+
+```env
+VITE_API_URL=http://localhost:3000
 ```
 
 ---
