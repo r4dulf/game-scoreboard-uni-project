@@ -18,7 +18,7 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+    <div className="main-container">
       <h1>Game Scoreboard</h1>
 
       {isAuthenticated ? (

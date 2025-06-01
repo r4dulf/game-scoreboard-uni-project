@@ -31,7 +31,7 @@ const AuthForm = ({ onAuth }: Props) => {
   };
 
   return (
-    <div>
+    <div className="auth-form">
       <h2>{mode === "login" ? "Login" : "Register"}</h2>
 
       <form onSubmit={handleSubmit}>
