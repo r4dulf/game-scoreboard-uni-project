@@ -1,79 +1,99 @@
-# 🎮 Game Scoreboard
+# Game Scoreboard – Educational Project
 
-A fullstack app for registering players and tracking scores, built using React, Express, and Prisma.  
-Created as a university documentation project.
+This is a full-stack educational project built for university coursework. It features a simple scoreboard system where users can register, log in, and track player scores.
 
----
+## 📦 Tech Stack
 
-## 🔧 Configuration
-
-### Backend `.env` file (`/backend/.env`):
-
-```env
-DATABASE_URL="file:./prisma/dev.db"
-JWT_SECRET="your-jwt-secret"
-PORT=3001
-```
-
-### Frontend uses `.env` via Vite (`/frontend/.env`):
-
-```env
-VITE_API_URL=http://localhost:3001
-```
+- **Frontend**: React + Vite
+- **Backend**: Node.js + Express + Prisma (SQLite)
+- **Documentation**: Storybook, Swagger
+- **GDPR**: Cookie consent, Privacy Policy
 
 ---
 
-## 🧪 Base Commands
+## ▶️ Getting Started
 
-### 📁 Backend (`/backend`):
+### Backend Setup
 
 ```bash
-npm install                   # install dependencies
-npx prisma generate           # generate Prisma client
-npx prisma migrate dev        # apply migrations
-npm run seed                  # seed DB with test players
-npm run dev                   # start Express server
+cd backend
+cp .env.example .env        # Copy example environment file
+npm install                 # Install dependencies
+npx prisma migrate dev --name init   # Initialize and migrate the database
+npm run seed                # Seed the database with initial players
+npm run dev                 # Start the backend server
 ```
 
-Swagger available at `http://localhost:3001/api-docs`.
+#### Backend Scripts
+
+| Script | Description                             |
+| ------ | --------------------------------------- |
+| `dev`  | Starts backend server using ts-node-dev |
+| `seed` | Seeds database with sample data         |
 
 ---
 
-### 🎨 Frontend (`/frontend`):
+### Frontend Setup
 
 ```bash
-npm install                   # install dependencies
-npm run dev                   # start Vite dev server
-npm run storybook             # launch Storybook
+cd frontend
+npm install                 # Install dependencies
+npm run dev                 # Start frontend dev server (Vite)
+```
+
+#### Frontend Scripts
+
+| Script            | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| `dev`             | Launches Vite development server                             |
+| `build`           | Compiles TypeScript and builds production-ready frontend     |
+| `lint`            | Lints project files using ESLint                             |
+| `preview`         | Serves built frontend locally                                |
+| `storybook`       | Starts Storybook on port 6006 for UI component documentation |
+| `build-storybook` | Builds static Storybook output for deployment                |
+
+---
+
+## 🧪 Documentation
+
+### API Swagger
+
+Once backend is running:
+
+📄 http://localhost:3000/api-docs
+
+### Storybook UI
+
+📘 http://localhost:6006/
+
+---
+
+## 🔐 Environment Variables
+
+Copy `.env.example` into `.env` in `backend/`:
+
+```env
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="your-secret"
+PORT=3000
 ```
 
 ---
 
-## 📚 Project Includes
+## 📜 License
 
-- ✅ REST API with JWT auth and Swagger UI
-- ✅ SQLite via Prisma ORM
-- ✅ Cookie Consent (GDPR compliant)
-- ✅ Privacy Policy page (`/privacy`)
-- ✅ Storybook with 2 documented components
-- ✅ Player score increment/decrement controls
-- ✅ ReadMe, License, seed, and env setup
+This project is licensed under the MIT License.  
+See [LICENSE](./LICENSE) for details.
 
 ---
 
-## 📄 License
+## 🧾 License Reports
 
-Project is licensed under the [MIT License](./LICENSE.txt).
-
-Dependency license reports:
-
-- [backend/license-checker-report.md](./backend/license-checker-report.md)
-- [frontend/license-checker-report.md](./frontend/license-checker-report.md)
+- [Backend License Report](./backend/license-checker-report.md)
+- [Frontend License Report](./frontend/license-checker-report.md)
 
 ---
 
 ## 👤 Author
 
-Developed by **Bohdan Stetsiuk**  
-Group: ІПЗ-22-2  
-For educational demonstration purposes.
+Created by [r4dulf](https://github.com/r4dulf) for educational purposes at university.
