@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { CookieContext } from "./context";
 
 export const CookieProvider = ({ children }: { children: React.ReactNode }) => {
@@ -6,11 +6,11 @@ export const CookieProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.getItem("cookieConsent") === "true"
   );
 
-  const acceptConsent = () => {
+  const acceptConsent = useCallback(() => {
     localStorage.setItem("cookieConsent", "true");
 
     setConsent(true);
-  };
+  }, []);
 
   return (
     <CookieContext.Provider value={{ consent, acceptConsent }}>

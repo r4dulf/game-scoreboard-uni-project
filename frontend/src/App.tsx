@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { logout } from "./api";
-import AuthForm from "./components/AuthForm";
 import PlayerList from "./components/PlayerList";
 import CookiePopup from "./components/CookiePopup";
+import AuthForm from "./components/AuthForm";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

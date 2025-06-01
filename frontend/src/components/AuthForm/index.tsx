@@ -1,6 +1,10 @@
 import { useState } from "react";
-import { login, register } from "../api";
-import { useCookieConsent } from "../context/CookieContext/useCookieContext";
+import { useCookieConsent } from "../../context/CookieContext/useCookieContext";
+import { login, register } from "../../api";
+import { Input } from "../Input";
+import { Button } from "../Button";
+
+import "./index.css";
 
 interface Props {
   onAuth: () => void;
@@ -46,7 +50,7 @@ const AuthForm = ({ onAuth }: Props) => {
       <h2>{mode === "login" ? "Login" : "Register"}</h2>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           placeholder="Username"
           value={name}
@@ -54,7 +58,7 @@ const AuthForm = ({ onAuth }: Props) => {
           required
         />
 
-        <input
+        <Input
           type="password"
           placeholder="Password"
           value={password}
@@ -62,14 +66,17 @@ const AuthForm = ({ onAuth }: Props) => {
           required
         />
 
-        <button type="submit">
+        <Button type="submit">
           {mode === "login" ? "Log in" : "Register"}
-        </button>
+        </Button>
       </form>
 
-      <button onClick={() => setMode(mode === "login" ? "register" : "login")}>
+      <Button
+        onClick={() => setMode(mode === "login" ? "register" : "login")}
+        kind="flat"
+      >
         {mode === "login" ? "Create an account" : "Already have an account?"}
-      </button>
+      </Button>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
