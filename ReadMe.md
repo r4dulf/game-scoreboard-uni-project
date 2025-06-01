@@ -76,17 +76,17 @@ Once backend is running:
 File: [`backend/.env.example`](./backend/.env.example)
 
 ```env
-DATABASE_URL="file:./dev.db"
-JWT_SECRET="your-secret"
-PORT=3000
+DATABASE_URL # SQLite database file path
+JWT_SECRET   # Secret key for JWT signing
+PORT         # Backend server port
 ```
 
 ### Frontend
 
-File: [`frontend/.env`](./frontend/.env) ← from [`frontend.env.example`](./frontend.env.example)
+File: [`frontend/.env`](./frontend/.env)
 
 ```env
-VITE_API_URL=http://localhost:3000
+VITE_API_URL # URL of the backend API
 ```
 
 ---
